@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/* reset */
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul, li, ol{list-style: none;}
+a{text-decoration: none; color:#333 ;}
+body{background-color: #fff; font-size: 14px; font-family: "돋움";}
+
+#wrap{}
+#header{width: 100%;height: 100px;}
+.head_inner{width: 1200px;height: 100px; margin: 0 auto; background-color: antiquewhite;}
+.logo{width: 200px;height: 40px;margin-top: 30px; float: left;}
+
+.nav{float: right;margin-top: 30px;}
+.main{}
+.main > li{float: left;width: 200px;text-align: center;position: relative;}
+.main>li>a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background-color: #0076be;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+.main > li:hover > a{background-color:#e66b27}
+/* .main > li > a:hover{background-color:#e66b27} */
+
+.sub {
+    width: 200px;
+    height: 140px;
+    background-color: #0076be;
+    position:absolute;
+    /* 수정할 부분 */
+    z-index: 100;
+}
+.sub li{}
+.sub li a {
+    display: block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: #0076be;
+    color: white;
+}
+
+.sub li a:hover {
+    background-color: #e66b27
+}
+
+
+#contents{width: 1200px;height: 500px; margin: 0 auto; background-color: aqua;}
+.slide_img{width: 1200px;height: 300px;position: relative; overflow: hidden;}
+.move{width: 3600px;height: 300px;position: absolute; left: 0;top: 0;}
+.move li{width: 1200px;height: 300px;float: left;}
+.move li img{width: 1200px;height: 300px;}
+
+.conts{width: 1200px;height: 200px;}
+.conts>div {
+    float: left;
+    width: 390px;
+    height: 200px;
+    background-color: burlywood;
+    margin-right: 15px;
+}
+.notice_gallery{position: relative;}
+.notice_gallery h2 {
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    float: left;
+    cursor: pointer;
+}
+.notice_gallery h2.on{background-color: #fff;}
+
+.notice_gallery ul {
+    width: 390px;
+    height: 165px;
+    background-color: #fff;
+    padding: 5px;
+    position: absolute;
+    top: 35px;
+    left: 0;
+}
+
+.notice{}
+.notice ul{}
+.notice ul li{font-size: 13px; line-height: 31px;width: 100%;height: 31px;padding: 0 3px;}
+.notice ul li a {
+    display: block;
+    width: 70%;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.notice ul li span{float: right;}
+
+.notice ul li:nth-child(2n){ background-color: darkcyan;}
+.notice ul li:nth-child(2n+1){ background-color:darkkhaki;}
+/* 2*0  2*1  2*2   2*3* */
+   /* 2*0+1   2*1+1   2*2+1    */
+
+.gallery{}
+.gallery ul{text-align: center;display:none;}
+.gallery ul li{display: inline-block;}
+.gallery ul li img{width: 120px;height: 155px;}
+
+.banner{padding: 5px;}
+.banner img{width: 380px; height: 190px;}
+
+.baro{margin-right: 0!important; padding: 5px;}
+.baro img{width: 380px; height: 190px;}
+
+#footer{width: 100%;height: 100px;}
+.foot_inner{width: 1200px;height: 100px;margin: 0 auto;}
+.f_logo{width: 200px;height: 40px;margin-top: 30px;float: left;}
+.f_right{width: 1000px;height: 100px;float: right;}
+
+.f_menu{height: 50px;}
+.f_menu ul{text-align: center;}
+.f_menu ul li{display: inline-block;}
+.f_menu ul li a{padding: 0 10px; line-height: 50px;}
+.f_menu ul li a:hover{text-decoration: underline;}
+
+.copy{line-height: 50px ; text-align: center;}
+
+
+
+.popup {
+    width: 500px;
+    height: 600px;
+    background-color: #fff;
+    border: 10px groove #e66b27;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* transform: translate(-50%, -50%); */
+    margin-left: -250px;
+    margin-top: -300px;
+    z-index: 300;
+    padding: 30px;
+    display: none;
+}
+.popup h4 {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.popup p{padding-top: 20px; line-height: 200%;}
+.popup .close {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    cursor: pointer;
+}
